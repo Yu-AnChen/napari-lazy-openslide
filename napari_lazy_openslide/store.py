@@ -86,7 +86,7 @@ class OpenSlideStore(Store):
 
         return np.array(tile).tobytes()
 
-    def getitems(self, keys):
+    def getitems(self, keys, *, contexts):
         return {k: self[k] for k in keys}
 
     def __contains__(self, key: str):
